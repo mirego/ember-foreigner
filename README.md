@@ -5,11 +5,11 @@
 
 `ember-foreigner` is a set of helpers and mixins to interface with the [foreigner.js](https://github.com/mirego/foreigner.js) library in Ember.
 
-## Usage
+## Setup
 
 ### With ember-cli
 
-Import foreigner and ember-foreigner in your build:
+1. Import foreigner and ember-foreigner in your build:
 
 ```js
 // Brocfile.js
@@ -23,12 +23,68 @@ app.import('vendor/ember-foreigner/dist/named-amd/main.js', {
 });
 ```
 
-Import the initializer to register ember-foreigner with Ember:
+2. Import the initializer to register ember-foreigner with Ember:
 
 ```js
 // app.js
 import 'ember-foreigner';
 ```
+
+3. Write a translation file
+
+```js
+foreigner.translations.en = {
+  hello_world: 'Hello, World'
+};
+```
+
+4. Set the current locale and include your translation file in your `index.html`
+
+```html
+<script>
+  window.foreigner.locale = 'en';
+
+  // (Optional) If you’re using Ember-Validations you can alias
+  // Ember.i18n to foreigner to have default error messages
+  Ember.I18n = foreigner;
+</script>
+
+<script src="locales/en.js"></script>
+```
+
+## Usage
+
+### Translating text content
+
+```hbs
+{{!-- simple translation --}}
+<h1>{{t 'hello_world'}}</h1>
+
+{{!-- Bound interpolated values --}}
+<p>{{t 'you_have_x_message' messageCountBinding='messages.length'}}</p>
+```
+
+### Translating attributes in a view
+
+Say you want to translate the `placeholder` attribute on the `input` helper.
+
+First, you have to include the `translateable-attributes` mixin on the `Ember.TextField` class:
+
+```js
+import TranslateableAttributes from 'ember-foreigner/mixins/translateable-attributes';
+
+Ember.TextField.reopen(TranslateableAttributes);
+```
+
+And then you can define your placeholder like this:
+
+```hbs
+{{input placeholderTranslation='form.input_placeholder'}}
+```
+
+### Translate attributes on a plain tag
+
+<a {{translateAttr title='link_title'}}>Link</a>
 
 ## Building the library
 
