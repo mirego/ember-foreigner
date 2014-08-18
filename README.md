@@ -9,7 +9,7 @@
 
 ### With ember-cli
 
-1. Import foreigner and ember-foreigner in your build:
+1. Import `foreigner` and `ember-foreigner` in your build:
 
   ```js
   // Brocfile.js
@@ -23,7 +23,7 @@
   });
   ```
 
-2. Import the initializer to register ember-foreigner with Ember:
+2. Import the initializer to register `ember-foreigner` with Ember:
 
   ```js
   // app.js
