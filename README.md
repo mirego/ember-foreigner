@@ -32,7 +32,7 @@ import 'ember-foreigner';
 
 ## Building the library
 
-- Run `npm install -g broccoli-cli` to install Grunt
+- Run `npm install -g broccoli-cli` to install Broccoli
 - Run `npm install` to install build dependencies
 - Run `broccoli build dist`
 
