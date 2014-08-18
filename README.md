@@ -11,46 +11,46 @@
 
 1. Import foreigner and ember-foreigner in your build:
 
-```js
-// Brocfile.js
-app.import('vendor/foreigner.js/dist/foreigner.js');
+  ```js
+  // Brocfile.js
+  app.import('vendor/foreigner.js/dist/foreigner.js');
 
-app.import('vendor/ember-foreigner/dist/named-amd/main.js', {
-  exports: {
-    'ember-foreigner': ['default'],
-    'ember-foreigner/mixins/translateable-attributes': ['default']
-  }
-});
-```
+  app.import('vendor/ember-foreigner/dist/named-amd/main.js', {
+    exports: {
+      'ember-foreigner': ['default'],
+      'ember-foreigner/mixins/translateable-attributes': ['default']
+    }
+  });
+  ```
 
 2. Import the initializer to register ember-foreigner with Ember:
 
-```js
-// app.js
-import 'ember-foreigner';
-```
+  ```js
+  // app.js
+  import 'ember-foreigner';
+  ```
 
 3. Write a translation file
 
-```js
-foreigner.translations.en = {
-  hello_world: 'Hello, World'
-};
-```
+  ```js
+  foreigner.translations.en = {
+    hello_world: 'Hello, World'
+  };
+  ```
 
 4. Set the current locale and include your translation file in your `index.html`
 
-```html
-<script>
-  window.foreigner.locale = 'en';
+  ```html
+  <script>
+    window.foreigner.locale = 'en';
 
-  // (Optional) If you’re using Ember-Validations you can alias
-  // Ember.i18n to foreigner to have default error messages
-  Ember.I18n = foreigner;
-</script>
+    // (Optional) If you’re using Ember-Validations you can alias
+    // Ember.i18n to foreigner to have default error messages
+    Ember.I18n = foreigner;
+  </script>
 
-<script src="locales/en.js"></script>
-```
+  <script src="locales/en.js"></script>
+  ```
 
 ## Usage
 
@@ -84,7 +84,9 @@ And then you can define your placeholder like this:
 
 ### Translate attributes on a plain tag
 
+```hbs
 <a {{translateAttr title='link_title'}}>Link</a>
+```
 
 ## Building the library
 
