@@ -1,0 +1,22 @@
+{
+  "name": "ember-foreigner",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mirego/ember-foreigner",
+  "authors": [
+    "Charles Demers <cdemers@mirego.com>"
+  ],
+  "description": "ember-foreigner is a set of helpers and mixins to interface with the foreigner.js library in Ember.",
+  "main": "dist/named-amd/main.js",
+  "keywords": [
+    "ember",
+    "foreigner.js"
+  ],
+  "license": "BSD 3-Clause",
+  "ignore": [
+    "**/.*",
+    "Brocfile.js",
+    "package.json",
+    "node_modules"
+  ],
+  "devDependencies": {}
+}

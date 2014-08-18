@@ -1,0 +1,19 @@
+{
+  "name": "ember-foreigner",
+  "version": "0.0.1",
+  "description": "ember-foreigner is a set of helpers and mixins to interface with the foreigner.js library in Ember.",
+  "main": "dist/named-amd/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mirego/ember-foreigner.git"
+  },
+  "author": "Charles Demers <cdemers@mirego.com>",
+  "license": "BSD 3-Clause",
+  "bugs": {
+    "url": "https://github.com/mirego/ember-foreigner/issues"
+  },
+  "devDependencies": {
+    "broccoli": "^0.12.3",
+    "broccoli-dist-es6-module": "^0.2.0"
+  }
+}
