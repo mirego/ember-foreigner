@@ -30,7 +30,7 @@
   import 'ember-foreigner';
   ```
 
-3. Write a translation file
+3. Write a translation file:
 
   ```js
   foreigner.translations.en = {
@@ -38,7 +38,7 @@
   };
   ```
 
-4. Set the current locale and include your translation file in your `index.html`
+4. Set the current locale and include your translation file in your `index.html`:
 
   ```html
   <script>
@@ -57,7 +57,7 @@
 ### Translating text content
 
 ```hbs
-{{!-- simple translation --}}
+{{!-- Simple translation --}}
 <h1>{{t 'hello_world'}}</h1>
 
 {{!-- Bound interpolated values --}}
