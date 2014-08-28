@@ -1,12 +1,11 @@
 "use strict";
 var Ember = require("ember")["default"] || require("ember");
-var t = require("./helpers/t")["default"] || require("./helpers/t");
-var translateAttr = require("./helpers/translate-attr")["default"] || require("./helpers/translate-attr");
+var initializer = require("./initializer")["default"] || require("./initializer");
 
-Ember.Application.initializer({
-  name: 'ember-foreigner',
-  initialize: function(container) {
-    Ember.Handlebars.registerBoundHelper('t', t);
-    Ember.Handlebars.registerHelper('translate-attr', translateAttr);
-  }
+Ember.onLoad('Ember.Application', function(Application) {
+  Application.initializer(initializer);
 });
+
+if (Ember.libraries) {
+  Ember.libraries.register('ember-foreigner', '0.0.2');
+}

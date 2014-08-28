@@ -1,6 +1,6 @@
 {
   "name": "ember-foreigner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ember-foreigner is a set of helpers and mixins to interface with the foreigner.js library in Ember.",
   "main": "dist/named-amd/main.js",
   "repository": {
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "broccoli": "^0.12.3",
-    "broccoli-dist-es6-module": "^0.2.0"
+    "broccoli-dist-es6-module": "mirego/broccoli-dist-es6-module",
+    "broccoli-replace": "^0.1.7"
   }
 }
