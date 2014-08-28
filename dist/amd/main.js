@@ -1,16 +1,15 @@
 define(
-  ["ember","./helpers/t","./helpers/translate-attr"],
-  function(__dependency1__, __dependency2__, __dependency3__) {
+  ["ember","./initializer"],
+  function(__dependency1__, __dependency2__) {
     "use strict";
     var Ember = __dependency1__["default"] || __dependency1__;
-    var t = __dependency2__["default"] || __dependency2__;
-    var translateAttr = __dependency3__["default"] || __dependency3__;
+    var initializer = __dependency2__["default"] || __dependency2__;
 
-    Ember.Application.initializer({
-      name: 'ember-foreigner',
-      initialize: function(container) {
-        Ember.Handlebars.registerBoundHelper('t', t);
-        Ember.Handlebars.registerHelper('translate-attr', translateAttr);
-      }
+    Ember.onLoad('Ember.Application', function(Application) {
+      Application.initializer(initializer);
     });
+
+    if (Ember.libraries) {
+      Ember.libraries.register('ember-foreigner', '0.0.2');
+    }
   });

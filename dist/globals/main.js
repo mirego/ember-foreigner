@@ -35,13 +35,25 @@ var Ember = window.Ember["default"] || window.Ember;
 var t = _dereq_("./helpers/t")["default"] || _dereq_("./helpers/t");
 var translateAttr = _dereq_("./helpers/translate-attr")["default"] || _dereq_("./helpers/translate-attr");
 
-Ember.Application.initializer({
+exports["default"] = {
   name: 'ember-foreigner',
   initialize: function(container) {
     Ember.Handlebars.registerBoundHelper('t', t);
     Ember.Handlebars.registerHelper('translate-attr', translateAttr);
   }
+};
+},{"./helpers/t":1,"./helpers/translate-attr":2}],4:[function(_dereq_,module,exports){
+"use strict";
+var Ember = window.Ember["default"] || window.Ember;
+var initializer = _dereq_("./initializer")["default"] || _dereq_("./initializer");
+
+Ember.onLoad('Ember.Application', function(Application) {
+  Application.initializer(initializer);
 });
-},{"./helpers/t":1,"./helpers/translate-attr":2}]},{},[3])
-(3)
+
+if (Ember.libraries) {
+  Ember.libraries.register('ember-foreigner', '0.0.2');
+}
+},{"./initializer":3}]},{},[4])
+(4)
 });
