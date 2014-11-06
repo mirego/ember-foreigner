@@ -51,7 +51,7 @@ Ember.onLoad('Ember.Application', function(Application) {
 });
 
 if (Ember.libraries) {
-  Ember.libraries.register('ember-foreigner', '0.0.2');
+  Ember.libraries.register('ember-foreigner', '0.0.3');
 }
 },{"./initializer":3}]},{},[4])
 (4)

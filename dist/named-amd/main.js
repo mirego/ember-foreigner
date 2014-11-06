@@ -62,7 +62,7 @@ define("ember-foreigner",
     });
 
     if (Ember.libraries) {
-      Ember.libraries.register('ember-foreigner', '0.0.2');
+      Ember.libraries.register('ember-foreigner', '0.0.3');
     }
   });
 define("ember-foreigner/mixins/translateable-attributes",

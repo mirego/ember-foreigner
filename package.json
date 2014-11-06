@@ -1,6 +1,6 @@
 {
   "name": "ember-foreigner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ember-foreigner is a set of helpers and mixins to interface with the foreigner.js library in Ember.",
   "main": "dist/named-amd/main.js",
   "repository": {
