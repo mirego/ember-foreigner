@@ -1,3 +1,7 @@
+__[DEPRECATION NOTICE] This project is no longer maintained.__
+
+We strongly suggest you migrate your app to [ember-cli-foreigner](https://github.com/mirego/ember-cli-foreigner).
+
 # ember-foreigner
 
 [![Bower version](https://badge.fury.io/bo/ember-foreigner.svg)](http://badge.fury.io/bo/ember-foreigner)
